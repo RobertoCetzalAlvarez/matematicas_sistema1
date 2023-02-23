@@ -10,14 +10,14 @@
         <div class="card">
             <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    {{ __('category') }}
+                    {{ __('Categorías') }}
                 </h6>
                 <div class="ml-auto">
                     <a href="{{ route('admin.categories.create') }}" class="btn btn-primary">
                         <span class="icon text-white-50">
                             <i class="fa fa-plus"></i>
                         </span>
-                        <span class="text">{{ __('New category') }}</span>
+                        <span class="text">{{ __('Nueva categoría') }}</span>
                     </a>
                 </div>
             </div>
@@ -30,8 +30,8 @@
 
                                 </th>
                                 <th>No</th>
-                                <th>Name</th>
-                                <th>Action</th>
+                                <th>Nombre</th>
+                                <th>Aciones</th>
                             </tr>
                         </thead>
                         <tbody>

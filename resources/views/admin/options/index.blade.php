@@ -10,14 +10,14 @@
         <div class="card">
             <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    {{ __('option') }}
+                    {{ __('Opciones') }}
                 </h6>
                 <div class="ml-auto">
                     <a href="{{ route('admin.options.create') }}" class="btn btn-primary">
                         <span class="icon text-white-50">
                             <i class="fa fa-plus"></i>
                         </span>
-                        <span class="text">{{ __('New option') }}</span>
+                        <span class="text">{{ __('Nueva Opción') }}</span>
                     </a>
                 </div>
             </div>
@@ -30,10 +30,10 @@
 
                                 </th>
                                 <th>No</th>
-                                <th>Question</th>
-                                <th>option Text</th>
-                                <th>Point</th>
-                                <th>Action</th>
+                                <th>Pregunta</th>
+                                <th>Opción</th>
+                                <th>Puntos</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
