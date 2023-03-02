@@ -28,7 +28,7 @@
                     @method('put')
                     <div class="form-group">
                         <label for="title">Título</label>
-                        <input type="text" class="form-control" id="title" placeholder="Título" name="title" value="{{ old('title', $permission->title) }}" />
+                        <input type="text" class="form-control" id="title" placeholder="Escribe el nombre del permiso" name="title" value="{{ old('title', $permission->title) }}" />
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">{{ __('Guardar')}}</button>
                 </form>

@@ -18,7 +18,7 @@
                         <span class="icon text-white-50">
                             <i class="fa fa-plus"></i>
                         </span>
-                        <span class="text">{{ __('New permission') }}</span>
+                        <span class="text">{{ __('Nuevo Permiso') }}</span>
                     </a>
                     @endcan
                 </div>
@@ -32,8 +32,8 @@
 
                                 </th>
                                 <th>No</th>
-                                <th>Title</th>
-                                <th>Action</th>
+                                <th>Título</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -49,7 +49,7 @@
                                         <a href="{{ route('admin.permissions.edit', $permission->id) }}" class="btn btn-info">
                                             <i class="fa fa-pencil-alt"></i>
                                         </a>
-                                        <form onclick="return confirm('are you sure ? ')" class="d-inline" action="{{ route('admin.permissions.destroy', $permission->id) }}" method="POST">
+                                        <form onclick="return confirm('Estás seguro ? ')" class="d-inline" action="{{ route('admin.permissions.destroy', $permission->id) }}" method="POST">
                                             @csrf
                                             @method('delete')
                                             <button class="btn btn-danger" style="border-top-left-radius: 0;border-bottom-left-radius: 0;">

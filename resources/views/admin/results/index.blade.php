@@ -10,14 +10,14 @@
         <div class="card">
             <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    {{ __('result') }}
+                    {{ __('Resultados') }}
                 </h6>
                 <div class="ml-auto">
                     <a href="{{ route('admin.results.create') }}" class="btn btn-primary">
                         <span class="icon text-white-50">
                             <i class="fa fa-plus"></i>
                         </span>
-                        <span class="text">{{ __('New result') }}</span>
+                        <span class="text">{{ __('Nuevo Resultado') }}</span>
                     </a>
                 </div>
             </div>
@@ -30,10 +30,10 @@
 
                                 </th>
                                 <th>No</th>
-                                <th>User</th>
-                                <th>Points</th>
-                                <th>Questions</th>
-                                <th>Action</th>
+                                <th>Usuario</th>
+                                <th>Puntos</th>
+                                <th>Preguntas</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -58,7 +58,7 @@
                                         <a href="{{ route('admin.results.edit', $result->id) }}" class="btn btn-info">
                                             <i class="fa fa-pencil-alt"></i>
                                         </a>
-                                        <form onclick="return confirm('are you sure ? ')" class="d-inline" action="{{ route('admin.results.destroy', $result->id) }}" method="POST">
+                                        <form onclick="return confirm('Estás seguro ? ')" class="d-inline" action="{{ route('admin.results.destroy', $result->id) }}" method="POST">
                                             @csrf
                                             @method('delete')
                                             <button class="btn btn-danger" style="border-top-left-radius: 0;border-bottom-left-radius: 0;">
@@ -100,7 +100,7 @@
         alert('zero selected')
         return
       }
-      if (confirm('are you sure ?')) {
+      if (confirm('Estás seguro de elimarlo ?')) {
         $.ajax({
           headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
           method: 'POST',

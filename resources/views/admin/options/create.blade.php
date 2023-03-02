@@ -37,7 +37,7 @@
                     </div>
                     <div class="form-group">
                         <label for="option_text">{{ __('Opción') }}</label>
-                        <input type="text" class="form-control" id="option_text" placeholder="{{ __('Opción') }}" name="option_text" value="{{ old('option_text') }}" />
+                        <input type="text" class="form-control" id="option_text" placeholder="{{ __('Escribe la opción como respuesta a la pregunta') }}" name="option_text" value="{{ old('option_text') }}" />
                     </div>
                     <div class="form-group">
                         <label for="points">{{ __('Puntos') }}</label>

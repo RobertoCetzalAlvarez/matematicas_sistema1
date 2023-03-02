@@ -29,7 +29,7 @@
                     @csrf
                     <div class="form-group">
                         <label for="title">{{ __('Título') }}</label>
-                        <input type="text" class="form-control" id="title" placeholder="{{ __('Título') }}" name="title" value="{{ old('title') }}" />
+                        <input type="text" class="form-control" id="title" placeholder="{{ __('Escribe el nombre del permiso') }}" name="title" value="{{ old('title') }}" />
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">{{ __('Guardar') }}</button>
                 </form>

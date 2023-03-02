@@ -15,7 +15,7 @@
                         <span class="icon text-white-50">
                             <i class="fa fa-plus"></i>
                         </span>
-                        <span class="text">{{ __('New role') }}</span>
+                        <span class="text">{{ __('Nuevo rol') }}</span>
                     </a>
                     @endcan
                 </div>
@@ -29,9 +29,9 @@
 
                                 </th>
                                 <th>No</th>
-                                <th>Title</th>
-                                <th>Permission</th>
-                                <th>Action</th>
+                                <th>Título</th>
+                                <th>Permisos</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -50,7 +50,7 @@
                                     <a href="{{ route('admin.roles.edit', $role->id) }}" class="btn btn-info">
                                         <i class="fa fa-pencil-alt"></i>
                                     </a>
-                                    <form onclick="return confirm('are you sure ? ')"  class="d-inline" action="{{ route('admin.roles.destroy', $role->id) }}" method="POST">
+                                    <form onclick="return confirm('Estás seguro ? ')"  class="d-inline" action="{{ route('admin.roles.destroy', $role->id) }}" method="POST">
                                         @csrf
                                         @method('delete')
                                         <button class="btn btn-danger" style="border-top-left-radius: 0;border-bottom-left-radius: 0;">

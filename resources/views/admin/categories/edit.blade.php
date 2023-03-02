@@ -28,7 +28,7 @@
                     @method('put')
                     <div class="form-group">
                         <label for="name">Nombre</label>
-                        <input type="text" class="form-control" id="name" placeholder="Nombre" name="name" value="{{ old('name', $category->name) }}" />
+                        <input type="text" class="form-control" id="name" placeholder="Escribe el nombre de la categoría" name="name" value="{{ old('name', $category->name) }}" />
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">{{ __('Guardar')}}</button>
                 </form>

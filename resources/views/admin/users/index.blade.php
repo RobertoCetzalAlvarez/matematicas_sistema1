@@ -7,7 +7,7 @@
         <div class="card">
             <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-                {{ __('Users') }}
+                {{ __('Usuarios') }}
                 </h6>
                 <div class="ml-auto">
                     @can('user_create')
@@ -15,7 +15,7 @@
                         <span class="icon text-white-50">
                             <i class="fa fa-plus"></i>
                         </span>
-                        <span class="text">{{ __('New user') }}</span>
+                        <span class="text">{{ __('Nuevo Usuario') }}</span>
                     </a>
                     @endcan
                 </div>
@@ -29,10 +29,10 @@
 
                                 </th>
                                 <th>No</th>
-                                <th>{{ __('Name') }}</th>
-                                <th>{{ __('Email') }}</th>
+                                <th>{{ __('Nombre') }}</th>
+                                <th>{{ __('Correo Electrónico') }}</th>
                                 <th>{{ __('Roles') }}</th>
-                                <th>{{ __('Action') }}</th>
+                                <th>{{ __('Acciones') }}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -52,7 +52,7 @@
                                         <a href="{{ route('admin.users.edit', $user->id) }}" class="btn btn-info">
                                             <i class="fa fa-pencil-alt"></i>
                                         </a>
-                                        <form onclick="return confirm('are you sure ? ')"  class="d-inline" action="{{ route('admin.users.destroy', $user->id) }}" method="POST">
+                                        <form onclick="return confirm('Estás seguro ? ')"  class="d-inline" action="{{ route('admin.users.destroy', $user->id) }}" method="POST">
                                             @csrf
                                             @method('delete')
                                             <button class="btn btn-danger" style="border-top-left-radius: 0;border-bottom-left-radius: 0;">

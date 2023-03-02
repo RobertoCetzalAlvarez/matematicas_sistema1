@@ -5,15 +5,15 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Results of your test</div>
+                <div class="card-header">Resultados del Quiz</div>
 
                 <div class="card-body">
-                    <p class="mt-5">Total points: {{ $result->total_points }} points</p>
+                    <p class="mt-5">Total de puntos: {{ $result->total_points }} puntos</p>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>Question Text</th>
-                                <th>Points</th>
+                                <th>Pregunta</th>
+                                <th>Puntos</th>
                             </tr>
                         </thead>
                         <tbody>
