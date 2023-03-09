@@ -203,6 +203,22 @@
             window.location.href = "/quiz/results";
         }
     }, 1000); // Actualiza cada segundo
+
+    window.addEventListener("beforeunload", function (e) {
+  var confirmationMessage = "¿Seguro que quieres salir de la página?";
+
+  // Desactivar el botón de recarga
+  var reloadButton = document.querySelector('button[type="submit"]');
+  reloadButton.disabled = true;
+
+  // Mostrar un mensaje de alerta
+  alert("No puedes recargar la página mientras esta alerta esté activa.");
+
+  // En algunos navegadores, es necesario devolver el mensaje de confirmación personalizado
+  (e || window.event).returnValue = confirmationMessage;
+  return confirmationMessage;
+});
+
 </script>
 
 @endsection
