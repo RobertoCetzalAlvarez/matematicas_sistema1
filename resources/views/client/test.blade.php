@@ -2,12 +2,6 @@
 
 @section('content')
 
-<script type="text/javascript">
-    function timeout() {
-
-    }
-</script>
-
 <body class="background-radial-gradient">
     <style>
         .background-radial-gradient {
@@ -200,16 +194,17 @@
         // Verifica si el tiempo límite ha sido alcanzado
         if (elapsedTime >= quizDuration * 60) {
             // Redirige al usuario a la página de resultados del quiz
-            window.location.href = "client.results.show";
+            window.location.href = "/quiz/results";
         }
     }, 1000); // Actualiza cada segundo
 
+    //alert
     window.addEventListener("beforeunload", function (e) {
   var confirmationMessage = "¿Seguro que quieres salir de la página?";
 
   // Desactivar el botón de recarga
   var reloadButton = document.querySelector('button[type="submit"]');
-  reloadButton.disabled = true;
+  reloadButton.disabled = false;
 
   // Mostrar un mensaje de alerta
   alert("No puedes recargar la página mientras esta alerta esté activa.");
