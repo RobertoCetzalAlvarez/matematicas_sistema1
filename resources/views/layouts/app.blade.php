@@ -6,7 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <link rel="icon" type="image/png" href="{{ asset('img/logo1.png') }}">
     <title>{{ __('Quiz Matemático') }}</title>
 
     <!-- Scripts -->
@@ -21,9 +21,10 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-warning shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/') }}" style="color: hsl(218, 100%, 100%)">
+                <img src="img/logo1.png" width="80" height="80">
                     {{ __('Matemáticas para todo el mundo 2023') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -42,13 +43,13 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}" style="color: hsl(218, 100%, 100%)">{{ __('Iniciar Sesión') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Crear Cuenta') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}" style="color: hsl(218, 100%, 100%)">{{ __('Crear Cuenta') }}</a>
                                 </li>
                             @endif
                         @else
