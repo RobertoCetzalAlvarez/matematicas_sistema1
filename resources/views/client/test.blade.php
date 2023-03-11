@@ -99,7 +99,7 @@
 
                     <div class="card-header" backgroun-color="white">Quiz Matemático
 
-                        <div id="timer" style="float:right">01:00:00</div>
+                        <div id="timer" style="float:right">01:30:00</div>
 
 
                         <div class="card-body">
@@ -166,37 +166,41 @@
         </div>
 </body>
 <script>
-    // Obtiene la etiqueta HTML donde se mostrará el tiempo restante
-    var timerLabel = document.getElementById("timer");
+   // Obtiene la etiqueta HTML donde se mostrará el tiempo restante
+var timerLabel = document.getElementById("timer");
 
-    // Establece la duración del quiz en minutos
-    var quizDuration = 60; // 1 hora
+// Establece la duración del quiz en minutos
+var quizDuration = 90; // 1 hora y 30 minutos
 
-    // Guarda la hora actual en la sesión del usuario
-    sessionStorage.setItem("startTime", new Date().getTime());
+// Guarda la hora actual en la sesión del usuario
+sessionStorage.setItem("startTime", new Date().getTime());
 
-    // Función para actualizar el tiempo restante cada segundo
-    setInterval(function() {
-        // Obtiene la hora actual
-        var now = new Date().getTime();
+// Función para actualizar el tiempo restante cada segundo
+setInterval(function() {
+    // Obtiene la hora actual
+    var now = new Date().getTime();
 
-        // Calcula la diferencia entre la hora actual y la hora guardada en la sesión del usuario
-        var elapsedTime = (now - sessionStorage.getItem("startTime")) / 1000; // en segundos
-        var remainingTime = quizDuration * 60 - elapsedTime; // en segundos
+    // Calcula la diferencia entre la hora actual y la hora guardada en la sesión del usuario
+    var elapsedTime = (now - sessionStorage.getItem("startTime")) / 1000; // en segundos
+    var remainingTime = quizDuration * 60 - elapsedTime; // en segundos
 
-        // Convierte el tiempo restante a minutos y segundos
-        var minutes = Math.floor(remainingTime / 60);
-        var seconds = Math.floor(remainingTime % 60);
+    // Convierte el tiempo restante a horas, minutos y segundos
+    var hours = Math.floor(remainingTime / 3600);
+    var minutes = Math.floor((remainingTime % 3600) / 60);
+    var seconds = Math.floor(remainingTime % 60);
 
-        // Actualiza la etiqueta HTML con el tiempo restante
-        timerLabel.innerHTML = minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+    // Formatea la salida del temporizador en el formato "hh:mm:ss"
+    var formattedTime = hours.toString().padStart(2, "0") + ":" + minutes.toString().padStart(2, "0") + ":" + seconds.toString().padStart(2, "0");
 
-        // Verifica si el tiempo límite ha sido alcanzado
-        if (elapsedTime >= quizDuration * 60) {
-            // Redirige al usuario a la página de resultados del quiz
-            window.location.href = "/client/results";
-        }
-    }, 1000); // Actualiza cada segundo
+    // Actualiza la etiqueta HTML con el tiempo restante
+    timerLabel.innerHTML = formattedTime;
+
+    // Verifica si el tiempo límite ha sido alcanzado
+    if (elapsedTime >= quizDuration * 60) {
+        // Redirige al usuario a la página de resultados del quiz
+        window.location.href = "/client/results";
+    }
+}, 1000); // Actualiza cada segundo
 
     //alert
     window.addEventListener("beforeunload", function (e) {
