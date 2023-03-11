@@ -200,7 +200,7 @@
         // Verifica si el tiempo límite ha sido alcanzado
         if (elapsedTime >= quizDuration * 60) {
             // Redirige al usuario a la página de resultados del quiz
-            window.location.href = "/quiz/results";
+            window.location.href = "client.results.show";
         }
     }, 1000); // Actualiza cada segundo
 
