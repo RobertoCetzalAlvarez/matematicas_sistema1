@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return redirect()->route('client.test');
 });
+Route::view('images-geometria', 'images');
+Route::view('images-calculo', 'imagesc');
+
 
 Route::group(['middleware' => 'auth'], function() {
    

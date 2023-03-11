@@ -30,8 +30,15 @@
                 <h3 class="mx-auto text-center">  
                     <a class="nav-link text-center" href="{{ route('client.test') }}">
                         {{ __('Visualización del Quiz') }}
-                    </a></h3>
-                <h5 class="mx-auto text-center d-flex">  
+                    </a>
+                </h3>
+                <h5 class="mx-auto text-center d-flex"> 
+                <a class="nav-link text-center" href="images-calculo" target="blank">
+                        {{ __('Imagenes Calculo') }}
+                    </a> 
+                    <a class="nav-link text-center" href="images-geometria" target="blank">
+                        {{ __('Imagenes Geometria') }}
+                    </a> 
                     @auth
                         <a class="nav-link text-center" href="{{ route('admin.dashboard.index') }}">
                             {{ auth()->user()->name }}
