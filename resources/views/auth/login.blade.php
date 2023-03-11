@@ -1,32 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<body class="background-radial-gradient" style="background-repeat:no-repeat; background-size: cover;">
+<body background="img/red.jpg" style="background-repeat:no-repeat; background-size: cover;">
 <!-- Section: Design Block -->
 <!-- <section class="background-radial-gradient overflow-hidden"> -->
   <style>
-    .background-radial-gradient {
-      background-color: hsl(218, 41%, 15%);
-      background-image: radial-gradient(650px circle at 0% 0%,
-          hsl(218, 41%, 35%) 15%,
-          hsl(218, 41%, 30%) 35%,
-          hsl(218, 41%, 20%) 75%,
-          hsl(218, 41%, 19%) 80%,
-          transparent 100%),
-        radial-gradient(1250px circle at 100% 100%,
-          hsl(218, 41%, 45%) 15%,
-          hsl(218, 41%, 30%) 35%,
-          hsl(218, 41%, 20%) 75%,
-          hsl(218, 41%, 19%) 80%,
-          transparent 100%);
-    }
-
     #radius-shape-1 {
       height: 220px;
       width: 220px;
       top: -60px;
       left: -130px;
-      background: radial-gradient(#44006b, #ad1fff);
+      background: radial-gradient(#FFE500, #ad1fff);
       overflow: hidden;
     }
 
@@ -36,7 +20,7 @@
       right: -110px;
       width: 300px;
       height: 300px;
-      background: radial-gradient(#44006b, #ad1fff);
+      background: radial-gradient(#FFE500, #ad1fff);
       overflow: hidden;
     }
 
@@ -49,12 +33,12 @@
   <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-0">
     <div class="row gx-lg-5 align-items-center mb-0">
       <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
-        <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+        <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 100%, 100%)">
           Quiz Matemático <br />
-          <span style="color: hsl(218, 81%, 75%)">Pon a prueba tus conocimientos</span>
+          <span style="color: hsl(220, 100%, 55%)">Pon a prueba tus conocimientos</span>
         </h1>
-        <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
-          Defiende a tu equipo con este quiz
+        <p class="mb-4 opacity-70" style="color: hsl(218, 100%, 100%)">
+          Defiende a tu equipo con este quiz y ¡Mucha Suerte!
         </p>
       </div>
 

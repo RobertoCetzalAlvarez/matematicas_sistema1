@@ -38,7 +38,7 @@
                             @endforeach
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">{{ __('SGuardar') }}</button>
+                    <button type="submit" class="btn btn-primary btn-block">{{ __('Guardar') }}</button>
                 </form>
             </div>
         </div>
