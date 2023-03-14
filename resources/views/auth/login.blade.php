@@ -35,7 +35,7 @@
       <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
         <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 100%, 100%)">
           Quiz Matemático <br />
-          <span style="color: hsl(220, 100%, 55%)">Pon a prueba tus conocimientos</span>
+          <span style="color: hsl(239, 100%, 38%)">Pon a prueba tus conocimientos</span>
         </h1>
         <p class="mb-4 opacity-70" style="color: hsl(218, 100%, 100%)">
           Defiende a tu equipo con este quiz y ¡Mucha Suerte!

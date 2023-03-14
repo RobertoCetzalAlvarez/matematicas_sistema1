@@ -2,11 +2,8 @@
 
 @section('content')
 
-<body class="regular-progression">
+<body background="img/gradient.jpg" style="background-repeat:no-repeat; background-size: cover;">
     <style>
-        .regular-progression {
-  background: linear-gradient(to top, yellow, purple, red, yellow);
-}
     </style>
     <div class="container">
         <div class="row justify-content-center">

@@ -2,104 +2,19 @@
 
 @section('content')
 
-<body class="background-radial-gradient">
+<body background="img/gradient.jpg" style="background-repeat:no-repeat; background-size: cover;">>
     <style>
-        .background-radial-gradient {
-            background-color: hsl(218, 41%, 15%);
-            background-image: radial-gradient(650px circle at 0% 0%,
-                    hsl(218, 41%, 35%) 15%,
-                    hsl(218, 41%, 30%) 35%,
-                    hsl(218, 41%, 20%) 75%,
-                    hsl(218, 41%, 19%) 80%,
-                    transparent 100%),
-                radial-gradient(1250px circle at 100% 100%,
-                    hsl(218, 41%, 45%) 15%,
-                    hsl(218, 41%, 30%) 35%,
-                    hsl(218, 41%, 20%) 75%,
-                    hsl(218, 41%, 19%) 80%,
-                    transparent 100%);
-        }
 
-        #radius-shape-1 {
-            height: 220px;
-            width: 220px;
-            top: 100px;
-            left: 50px;
-            background: radial-gradient(#44006b, #ad1fff);
-            overflow: hidden;
-        }
-
-        #radius-shape-2 {
-            border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
-            bottom: -60px;
-            right: 50px;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(#44006b, #ad1fff);
-            overflow: hidden;
-        }
-
-        #radius-shape-3 {
-            border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
-            height: 250px;
-            width: 250px;
-            top: 850px;
-            left: 80px;
-            background: radial-gradient(#44006b, #ad1fff);
-            overflow: hidden;
-        }
-
-        #radius-shape-4 {
-            border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
-            bottom: -950px;
-            right: 50px;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(#44006b, #ad1fff);
-            overflow: hidden;
-        }
-
-        #radius-shape-5 {
-            border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
-            height: 250px;
-            width: 250px;
-            top: 1650px;
-            left: 80px;
-            background: radial-gradient(#44006b, #ad1fff);
-            overflow: hidden;
-        }
-
-        #radius-shape-6 {
-            border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
-            bottom: -1650px;
-            right: 50px;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(#44006b, #ad1fff);
-            overflow: hidden;
-        }
-
-        .bg-glass {
-            background-color: hsla(0, 0%, 100%, 0.9) !important;
-            backdrop-filter: saturate(200%) blur(25px);
-        }
     </style>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
 
-                <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
-                <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
-                <div id="radius-shape-3" class="position-absolute rounded-circle shadow-5-strong"></div>
-                <div id="radius-shape-4" class="position-absolute shadow-5-strong"></div>
-                <div id="radius-shape-5" class="position-absolute rounded-circle shadow-5-strong"></div>
-                <div id="radius-shape-6" class="position-absolute shadow-5-strong"></div>
-
-                <div class="card" sty>
+                <div class="card">
 
                     <div class="card-header" backgroun-color="white">Quiz Matemático
 
-                        <div id="timer" style="float:right">01:30:00</div>
+                        <div id="timer" style="float:right">01:00:00</div>
 
 
                         <div class="card-body">
@@ -167,41 +82,37 @@
     </div>
 </body>
 <script>
-   // Obtiene la etiqueta HTML donde se mostrará el tiempo restante
-var timerLabel = document.getElementById("timer");
+    // Obtiene la etiqueta HTML donde se mostrará el tiempo restante
+    var timerLabel = document.getElementById("timer");
 
-// Establece la duración del quiz en minutos
-var quizDuration = 90; // 1 hora y 30 minutos
+    // Establece la duración del quiz en minutos
+    var quizDuration = 60; // 1 hora
 
-// Guarda la hora actual en la sesión del usuario
-sessionStorage.setItem("startTime", new Date().getTime());
+    // Guarda la hora actual en la sesión del usuario
+    sessionStorage.setItem("startTime", new Date().getTime());
 
-// Función para actualizar el tiempo restante cada segundo
-setInterval(function() {
-    // Obtiene la hora actual
-    var now = new Date().getTime();
+    // Función para actualizar el tiempo restante cada segundo
+    setInterval(function() {
+        // Obtiene la hora actual
+        var now = new Date().getTime();
 
-    // Calcula la diferencia entre la hora actual y la hora guardada en la sesión del usuario
-    var elapsedTime = (now - sessionStorage.getItem("startTime")) / 1000; // en segundos
-    var remainingTime = quizDuration * 60 - elapsedTime; // en segundos
+        // Calcula la diferencia entre la hora actual y la hora guardada en la sesión del usuario
+        var elapsedTime = (now - sessionStorage.getItem("startTime")) / 1000; // en segundos
+        var remainingTime = quizDuration * 60 - elapsedTime; // en segundos
 
-    // Convierte el tiempo restante a horas, minutos y segundos
-    var hours = Math.floor(remainingTime / 3600);
-    var minutes = Math.floor((remainingTime % 3600) / 60);
-    var seconds = Math.floor(remainingTime % 60);
+        // Convierte el tiempo restante a minutos y segundos
+        var minutes = Math.floor(remainingTime / 60);
+        var seconds = Math.floor(remainingTime % 60);
 
-    // Formatea la salida del temporizador en el formato "hh:mm:ss"
-    var formattedTime = hours.toString().padStart(2, "0") + ":" + minutes.toString().padStart(2, "0") + ":" + seconds.toString().padStart(2, "0");
+        // Actualiza la etiqueta HTML con el tiempo restante
+        timerLabel.innerHTML = minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
 
-    // Actualiza la etiqueta HTML con el tiempo restante
-    timerLabel.innerHTML = formattedTime;
-
-    // Verifica si el tiempo límite ha sido alcanzado
-    if (elapsedTime >= quizDuration * 60) {
-        // Redirige al usuario a la página de resultados del quiz
-        window.location.href = "/client/results";
-    }
-}, 1000); // Actualiza cada segundo
+        // Verifica si el tiempo límite ha sido alcanzado
+        if (elapsedTime >= quizDuration * 60) {
+            // Redirige al usuario a la página de resultados del quiz
+            window.location.href = "/quiz/results";
+        }
+    }, 1000); // Actualiza cada segundo
 
     //alert
     window.addEventListener("beforeunload", function (e) {
