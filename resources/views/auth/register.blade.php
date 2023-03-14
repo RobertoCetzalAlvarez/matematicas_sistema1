@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<body background="img/red.jpg" style="background-repeat:no-repeat; background-size: cover;">
+<body background="img/pe.jpg" style="background-repeat:no-repeat; background-size: cover;">
 <!-- Section: Design Block -->
 <!-- <section class="background-radial-gradient overflow-hidden"> -->
   <style>

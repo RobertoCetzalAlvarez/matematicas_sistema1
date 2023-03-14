@@ -81,6 +81,7 @@
                 </div>
             </div>
         </div>
+    </div>
 </body>
 <script>
     // Obtiene la etiqueta HTML donde se mostrará el tiempo restante
